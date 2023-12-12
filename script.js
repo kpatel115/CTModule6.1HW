@@ -87,6 +87,7 @@ friend(people)
 /* In this kata you will 
 create a function that takes in a list
 and returns a list with the reverse order. */
+console.log('Codewars Question 4')
 ex1 = [1, 2, 3, 4]
 ex2 = [9, 2, 0, 7]
 function revList(lst){
