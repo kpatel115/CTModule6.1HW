@@ -100,42 +100,39 @@ revList(ex2)
 the list and checks that the current name is in the string passed in. The output should be:
 "Matched dog_name" if name is in the string, if no matches are present console.log "No Matches"
 */
+console.log('Exercise #1')
+function findWords(str, lst) {
+    let dog_list = str.split(' ');
+    var dog_words = dog_list.map(b => b.toLowerCase())
+    var words = lst.map(v => v.toLowerCase());
+
+    let names = [];
+
+    for (let i = 0; i < lst.length; i++) {
+        if (dog_words.includes(words[i])) {
+            names.push(words[i]);
+            console.log('Matched dog_name: ' + words[i]);
+        }
+    }
+
+    if (names.length === 0) {
+        console.log("No Matches");
+    }
+
+    return names;
+}
+
+// Example usage:
 let dog_string = "Hello Max, my name is Dog, and I have purple eyes!"
 let dog_names = ["Max","HAS","PuRple","dog"]
-let names = []
 
-function findWords(str,lst){
-    //Your code goes here
-    let regex = new RegExp(dog_names.join('|'));
-    for (let i in dog_string) {
-        dog_string[i] = dog_string[i].replace(/\s/g, '');
-    }
-    for (const string of dog_string) {
-        if (string.match(regex)) {
-            console.log('matched')
-        } else {
-            console.log("No match")
-        }
-    }
-}
+findWords(dog_string, dog_names);
 
-function findWords2(s,l){
-    for (let i = 0; i < l.length; i++){
-        if (l[i].indexOf(s)){
-            console.log('match')
-        } else {
-            console.log('no match')
-        }
-    }
-}
-//Call method here with parameters
-
-
-findWords2(dog_string, dog_names)
 
 //============Exercise #2 ============//
 /*Write a fucntion that takes in an array and removes every even index with a splice,
 and replaces it with the string "even index" */
+console.log('Exercise #2')
 
 let arr1 = ["Max","Baseball","Reboot","Goku","Trucks","Rodger"]
 
